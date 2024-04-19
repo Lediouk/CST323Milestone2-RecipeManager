@@ -20,7 +20,6 @@ public class UserController {
 
     @GetMapping("/dashboard")
     public String dashboard(Model model, Authentication authentication) {
-        // Assuming you have a method in your service layer to retrieve recipes
         List<Recipe> recipes = null;
 		try {
 			recipes = RecipeService.getAllRecipes();
