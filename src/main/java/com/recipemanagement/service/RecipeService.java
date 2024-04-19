@@ -28,4 +28,14 @@ public class RecipeService {
     public void deleteRecipe(Long id) {
         recipeRepository.deleteById(id);
     }
+
+	public Recipe findById(Long id) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	public void save(Recipe recipe) {
+		// TODO Auto-generated method stub
+		
+	}
 }
