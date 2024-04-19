@@ -20,7 +20,6 @@ public class UserService implements UserDetailsService {
         if (user == null) {
             throw new UsernameNotFoundException("User not found with username: " + username);
         }
-        // Return the User object, which implements UserDetails
         return user;
     }
 }
