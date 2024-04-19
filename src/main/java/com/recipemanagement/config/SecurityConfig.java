@@ -1,3 +1,5 @@
+package com.recipemanagement.config;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -21,7 +23,7 @@ public class SecurityConfig {
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
         http.csrf().disable()
             .authorizeRequests(authorizeRequests -> authorizeRequests
-                .antMatchers("/login").permitAll()
+                .requestMatchers("/login").permitAll()
                 .anyRequest().authenticated()
             )
             .formLogin(formLogin -> formLogin
